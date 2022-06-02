@@ -1,0 +1,180 @@
+$color-white: #fff;
+$color-gray: #dddada;
+// $color-ligthgray: #fffefe;
+$color-ligthgray: #eeebeb;
+
+img {
+  width: 25px;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: $color-ligthgray;
+}
+
+.blink {
+  animation: blink 1s steps(2, start) infinite;
+}
+.shadow {
+  box-shadow: 4px 4px 10px rgba($color: $color-gray, $alpha: 0.5),
+    -4px -4px 10px rgba($color: lighten($color-gray, 20%), $alpha: 0.5);
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* 
+* Stopwatch
+*/
+
+.stopwatch {
+  margin-top: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 50em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+
+  /* 
+    * Stopwatch timer
+    */
+
+  &__timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40em;
+    height: 40em;
+    margin-bottom: 4em;
+    border-radius: 50%;
+    background-color: $color-ligthgray;
+    color: #6425a0;
+  }
+
+  /* 
+    * Stopwatch data
+    */
+
+  &__data {
+    line-height: 1;
+    font-family: sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+
+    & :empty {
+      display: none;
+    }
+  }
+
+  &__hours::after,
+  &__minutes::after {
+    content: ":";
+  }
+
+  &__thirds {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    text-align: right;
+  }
+
+  &__tours {
+    padding: 1em 8em 5em;
+    max-height: 4em;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 20px;
+    margin-bottom: 2em;
+    overflow-y: scroll;
+    text-align: left;
+    font-family: "Ubuntu";
+
+    & div {
+      display: flex;
+      gap: 1.5em;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: $color-ligthgray;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &--toggle {
+      width: 130px;
+      height: 130px;
+
+      img:nth-child(2) {
+        display: none;
+      }
+
+      & + button {
+        visibility: hidden;
+      }
+    }
+
+    &--active {
+      width: 200px;
+      border-radius: 50px;
+
+      img:nth-child(1) {
+        display: none;
+      }
+
+      img:nth-child(2) {
+        display: inline;
+      }
+
+      & + button {
+        visibility: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <div class="stopwatch">
+      <div class="stopwatch__timer shadow">
+        <div id="stopwatch-data" class="stopwatch__data">
+          <span id="hours" class="stopwatch__hours"></span
+          ><span id="minutes" class="stopwatch__minutes"></span
+          ><span id="seconds" class="stopwatch__seconds">00</span
+          ><span id="thirds" class="stopwatch__thirds">00</span>
+        </div>
+      </div>
+
+      <div id="stopwatch-tours" class="stopwatch__tours shadow"></div>
+
+      <div class="stopwatch__control">
+        <button onclick="reset()" class="stopwatch__btn stopwatch__btn shadow">
+          <img src="/img/arrow-rotate-left-solid.svg" alt="" />
+        </button>
+        <button onclick="toggle()" id="toggle" class="stopwatch__btn stopwatch__btn--toggle shadow">
+          <img src="/img/play-solid.svg" alt="" />
+          <img src="/img/circle-pause-solid.svg" alt="" />
+        </button>
+        <button onclick="tours()" class="stopwatch__btn stopwatch__btn shadow">
+          <img src="/img/stopwatch-solid.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

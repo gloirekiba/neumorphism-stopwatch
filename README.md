@@ -14,7 +14,7 @@ A simple neumorphic stopwatch.
 * Sass
 
 ## Website preview can be viewed here
-[https://gloirekiba.github.io/neumorphism-stopwatch/](/https://gloirekiba.github.io/neumorphism-stopwatch/)
+[https://gloirekiba.github.io/neumorphism-stopwatch/](https://gloirekiba.github.io/neumorphism-stopwatch)
 
 
 ## Screenshots

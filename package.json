@@ -1,0 +1,23 @@
+{
+  "name": "neumorphism-stopwatch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloirekiba/neumorphism-stopwatch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gloirekiba/neumorphism-stopwatch/issues"
+  },
+  "homepage": "https://github.com/gloirekiba/neumorphism-stopwatch#readme",
+  "devDependencies": {
+    "sass": "^1.52.1"
+  }
+}

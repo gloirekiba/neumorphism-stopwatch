@@ -19,4 +19,4 @@ A simple neumorphic stopwatch.
 
 ## Screenshots
 
-![screen1](https://gdurl.com/ZyCh)
+![screen1](https://gdurl.com/6AkA)
